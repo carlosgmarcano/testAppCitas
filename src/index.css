@@ -1,23 +1,23 @@
-    .avatar {
-        margin: 5;
-        background-color: "#E55F16";
-        color: "#050507";
-        width: 60;
-        height: 60
-    }
-    .form {
-        width: "100%";
-        margin-top: 20
-    }
-    .icon {
-        font-size : 40
-    }
-    .paper {
-        margin-top: 8;
-        display: "flex";
-        flex-direction: "column";
-        align-items: "center"
-    }
-    .submit {
-        margin-top: 15;
-    }
+.avatar {
+  margin: 5;
+  background-color: '#E55F16';
+  color: '#050507';
+  width: 60;
+  height: 60;
+}
+.form {
+  width: '100%';
+  margin-top: 20;
+}
+.icon {
+  font-size: 40;
+}
+.paper {
+  margin-top: 8;
+  display: 'flex';
+  flex-direction: 'column';
+  align-items: 'center';
+}
+.submit {
+  margin-top: 15;
+}

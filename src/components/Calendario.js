@@ -1,12 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export const Calendario = () => {
-    return (
-        <div>
-            <h1>Calendario screen</h1>
-        </div>
-    )
-}
-
-export default Calendario
-
+  return (
+    <div>
+      <h1>Calendario screen</h1>
+    </div>
+  );
+};
