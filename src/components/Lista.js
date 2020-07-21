@@ -13,14 +13,10 @@ import SERESTAU from '../assets/images/SERESTAU.png';
 import SESUPER from '../assets/images/SESUPER.png';
 import SETERAPI from '../assets/images/SETERAPI.png';
 import SEZOOLOG from '../assets/images/SEZOOLOG.png';
-
-
-
-
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { Link } from 'react-router-dom';
-import { Card, CardActionArea, CardMedia, CardContent, Typography, makeStyles } from '@material-ui/core';
+import { Card, CardActions, CardMedia, CardContent, Typography, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,30 +36,29 @@ const Lista = ({items}) => {
 
     return (
       <Card className={style.root}>
-        <Link to = {`/Favoritos`} >
+        
           <GridList cellHeight={120} className={style.gridList}>
             <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
             </GridListTile>
               {items.map((item) => (
               <GridListTile>
-                <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        alt= {item.name}
-                        height="40"
-                        image={SEZOOLOG}
-                        title={item.name}
-                    />
-                    <CardContent>
-                        <Typography component="h6" variant="h6" color="secundary">
+                <Link to = {`/Favoritos`} >
+                  <CardActions>
+                      <CardMedia
+                          component="img"
+                          alt= {item.name}
+                          height="10"
+                          image={SEZOOLOG}
+                          title={item.name}
+                      />
+                  </CardActions>
+                </Link>
+                <Typography component="h6" variant="h6" color="primary">
                             {item.name}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
+                </Typography>
               </GridListTile>
             ))}
           </GridList>
-        </Link>
       </Card>
     )
 }

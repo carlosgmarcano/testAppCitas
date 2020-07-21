@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import SearchBar from './SearchBar';
 import Navbar from './Navbar';
+import CarouselSlide from './CarouselSlide';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +24,15 @@ export const Layout = ({ children }) => {
   return (
     <div className={classes.root}>
       <header>
+        <div>
         <SearchBar></SearchBar>
+        </div>
+        <div>
+                <CarouselSlide
+                    next={ (next, active) => console.log(`we left ${active}, and are now at ${next}`)}
+                    prev={ (prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
+                ></CarouselSlide>
+        </div>
       </header>
       <BrowserRouter>
         <Container component="main" className={classes.main} maxWidth="lg">

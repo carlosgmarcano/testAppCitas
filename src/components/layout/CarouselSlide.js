@@ -1,8 +1,8 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {Paper, Button, CardActionArea, CardMedia} from '@material-ui/core'
-import {img} from '../../../assets/images/PPROM03.png'
-import {img2} from '../../../assets/images/PPROM04.png'
+import {img} from '../../assets/images/PPROM03.png'
+import {img2} from '../../assets/images/PPROM04.png'
 
 function CarouselSlide(props)
 {
@@ -16,7 +16,7 @@ function CarouselSlide(props)
     ]
  
     return (
-        <Carousel>
+        <Carousel indicators= {false} >
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
