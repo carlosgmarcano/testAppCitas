@@ -10,9 +10,6 @@ const Style = {
         width: "100%",
         marginTop: 20
     },
-    icon : {
-        fontSize : 40
-    },
     paper: {
         marginTop: 8,
         display: "flex",
@@ -35,6 +32,7 @@ const Style = {
       },
       icon: {
         color: 'rgba(255, 255, 255, 0.54)',
+        fontSize : 40
       },
 };
 

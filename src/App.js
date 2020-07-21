@@ -5,16 +5,15 @@ import AppRouter from './components/AppRouter';
 import {Layout} from './components/layout';
 import { GlobalStateProvider } from './store';
 import theme from './theme/theme';
-import SectoresProvider from './components/context/SectoresContext';
 
 const App = () => (
   <MuiThemeProvider theme={theme}>
     <CssBaseline>
-    <SectoresProvider>
-     <Layout>
-          <AppRouter></AppRouter>
+      <GlobalStateProvider>
+        <Layout>
+            <AppRouter></AppRouter>
         </Layout>
-    </SectoresProvider>
+      </GlobalStateProvider>
     </CssBaseline>
   </MuiThemeProvider>
 );

@@ -1,13 +1,21 @@
 import { useReducer } from 'react';
 
 const reducer = (state, action) => {
+    switch (action.type) {
+        case "SECTORES" : {
+            return {
+                ...state,
+                sectores: [action.payload],
+            }
+        }
+    }
     return state;
 };
 
 export const useGlobalState = props => {
 
     const initialState = {
-        nVar : true
+        sectores: []
     }
 
     const [globalState, globalDispatch] = useReducer(reducer, initialState);
