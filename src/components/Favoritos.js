@@ -1,12 +1,7 @@
-import React, {useState} from 'react'
-import CarouselSlide from './layout/CarouselSlide';
+import React from 'react';
 
-export const Favoritos = () => {
-    return (
-            <div>
-                <h1>Favoritos</h1>
-            </div>
-        )
-}
-
-
+export const Favoritos = () => (
+  <div>
+    <h1>Favoritos</h1>
+  </div>
+);

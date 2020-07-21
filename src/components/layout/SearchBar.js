@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     width: '90%',
-
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -50,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   small: {
     width: theme.spacing(5),
     height: theme.spacing(5),
-  }  
+  },
 }));
 
 const SearchBar = () => {
@@ -58,12 +57,12 @@ const SearchBar = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" >
+      <AppBar position="static">
         <Toolbar>
           <div className={classes.root}>
-          <Avatar alt="Logo" src={Ico} className={classes.small} />
+            <Avatar alt="Logo" src={Ico} className={classes.small} />
           </div>
-          <div className={classes.search} maxWidth="lg">
+          <div className={classes.search} maxwidth="lg">
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>

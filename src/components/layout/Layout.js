@@ -25,13 +25,17 @@ export const Layout = ({ children }) => {
     <div className={classes.root}>
       <header>
         <div>
-        <SearchBar></SearchBar>
+          <SearchBar></SearchBar>
         </div>
         <div>
-                <CarouselSlide
-                    next={ (next, active) => console.log(`we left ${active}, and are now at ${next}`)}
-                    prev={ (prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
-                ></CarouselSlide>
+          <CarouselSlide
+            next={(next, active) =>
+              console.log(`we left ${active}, and are now at ${next}`)
+            }
+            prev={(prev, active) =>
+              console.log(`we left ${active}, and are now at ${prev}`)
+            }
+          ></CarouselSlide>
         </div>
       </header>
       <BrowserRouter>

@@ -29,7 +29,7 @@ const items = [
 const Navbar = () => {
   const location = useLocation();
 
-  let value = location.pathname.match(/(^\/\w*)\/?/)[1];
+  let value = String(location.pathname.match(/(^\/\w*)\/?/)[1]).toLowerCase();
 
   if (!items.some((item) => item.url === value)) {
     value = '/';
