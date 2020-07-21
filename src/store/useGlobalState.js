@@ -7,6 +7,9 @@ const reducer = (state, action) => {
                 sectores: action.payload,
             }
         }
+        case "EMPRESAS" : {
+            return 
+        }
     }
     return state;
 };

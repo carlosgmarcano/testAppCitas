@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
+import CarouselSlide from './layout/carousel/CarouselSlide';
 
 export const Favoritos = () => {
     return (
-        <div>
-            <h1>Favoritos screen</h1>
-        </div>
-    )
+            <div>
+                <CarouselSlide
+                    next={ (next, active) => console.log(`we left ${active}, and are now at ${next}`)}
+                    prev={ (prev, active) => console.log(`we left ${active}, and are now at ${prev}`)}
+                ></CarouselSlide>
+            </div>
+        )
 }
 
-export default Favoritos
+
