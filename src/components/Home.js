@@ -1,10 +1,10 @@
 import React,  {useContext} from 'react';
-import {SectoresContext} from '../context/SectoresContext';
+import SectoresContext from './context/SectoresContext';
 import style from '../style/Style';
 import { Container } from '@material-ui/core';
 import Lista from './Lista';
 
-export const Sector = () => {    
+export const Home = () => {    
     
     const {sectores} = useContext(SectoresContext);
 
@@ -12,11 +12,10 @@ export const Sector = () => {
     return ( 
         <Container maxWidth="xs">
             <div style={style.paper}>     
-                <Lista items = {sectores}/>
+                <h1>Hola</h1>
+                
             </div>
         </Container> 
 )}
 
-export default Sector;
-
-
+export default Home;
