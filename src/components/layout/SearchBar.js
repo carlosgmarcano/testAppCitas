@@ -4,8 +4,16 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
+import Ico from '../../assets/images/QVIP.png';
+import { Avatar } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
   grow: {
     flexGrow: 1,
   },
@@ -16,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    width: '100%',
+    width: '90%',
+
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -38,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
   },
+  small: {
+    width: theme.spacing(5),
+    height: theme.spacing(5),
+  }  
 }));
 
 const SearchBar = () => {
@@ -45,8 +58,11 @@ const SearchBar = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" >
         <Toolbar>
+          <div className={classes.root}>
+          <Avatar alt="Logo" src={Ico} className={classes.small} />
+          </div>
           <div className={classes.search} maxWidth="lg">
             <div className={classes.searchIcon}>
               <SearchIcon />

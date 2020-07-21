@@ -4,8 +4,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "SECTORES" : {
             return {
-                ...state,
-                sectores: [action.payload],
+                sectores: action.payload,
             }
         }
     }
