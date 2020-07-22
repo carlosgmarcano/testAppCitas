@@ -12,9 +12,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     minHeight: '100vh',
   },
-  main: {},
+  main: {
+    flex: '1 0 auto',
+  },
   footer: {
-    marginTop: 'auto',
+    flexShrink: '0',
   },
 }));
 
@@ -40,7 +42,7 @@ export const Layout = ({ children }) => {
       </header>
       <BrowserRouter>
         <Container component="main" className={classes.main} maxWidth="lg">
-          <main>{children}</main>
+          {children}
         </Container>
         <footer className={classes.footer}>
           <Container maxWidth="md">
