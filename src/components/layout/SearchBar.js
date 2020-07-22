@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import Ico from '../../assets/images/QVIP.png';
+import Ico from '../../assets/QVIP.png';
 import { Avatar } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
+    backgroundColor: theme.palette.background.paper,
   },
   grow: {
     flexGrow: 1,
@@ -57,7 +58,7 @@ const SearchBar = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.root} >
         <Toolbar>
           <div className={classes.root}>
             <Avatar alt="Logo" src={Ico} className={classes.small} />
@@ -67,7 +68,7 @@ const SearchBar = () => {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Buscar…"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,

@@ -5,6 +5,8 @@ import Container from '@material-ui/core/Container';
 import SearchBar from './SearchBar';
 import Navbar from './Navbar';
 import CarouselSlide from './CarouselSlide';
+import Copyright from './Copyright';
+import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     flexShrink: '0',
   },
+  divider: {
+    margin: "auto",
+    backgroundColor: theme.palette.primary.main
+  }
 }));
 
 export const Layout = ({ children }) => {
@@ -45,10 +51,12 @@ export const Layout = ({ children }) => {
           {children}
         </Container>
         <footer className={classes.footer}>
+          <Divider className={classes.divider} />
           <Container maxWidth="md">
             <nav>
               <Navbar></Navbar>
             </nav>
+            <Copyright />
           </Container>
         </footer>
       </BrowserRouter>

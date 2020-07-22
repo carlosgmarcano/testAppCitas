@@ -1,37 +1,51 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import {Paper, Button, CardActionArea, CardMedia} from '@material-ui/core'
-import {img} from '../../assets/images/PPROM03.png'
-import {img2} from '../../assets/images/PPROM04.png'
+import { CardMedia, CardActions } from '@material-ui/core'
 
-function CarouselSlide(props)
-{
+function CarouselSlide() {
     var items = [
         {
-            image : img
+            id: 3,
+            url: `${process.env.PUBLIC_URL}/images/PPROM03.png`,
+            name: 'Breakfast',
+            width: '100%'
         },
         {
-            image : img2
-        }
+            id: 2,
+            url: `${process.env.PUBLIC_URL}/images/PPROM05.png`,
+            name: 'Breakfast',
+            width: '100%',
+
+        },
+        {
+            id: 1,
+            url: `${process.env.PUBLIC_URL}/images/PPROM08.png`,
+            name: 'Breakfast',
+            width: '100%',
+
+        },
     ]
- 
+
     return (
-        <Carousel indicators= {false} >
+        <Carousel indicators={false} >
             {
-                items.map( (item, i) => <Item key={i} item={item} /> )
+                items.map((item, i) => <Item key={i} item={item} />)
             }
         </Carousel>
     )
 }
- 
-function Item(props)
-{
+
+function Item(props) {
     return (
-        <Paper>
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
+        <CardActions>
+            <CardMedia
+                component="img"
+                alt={props.item.name}
+                height="auto"
+                image={props.item.url}
+                title={props.item.name}
+            />
+        </CardActions>
     )
 }
 

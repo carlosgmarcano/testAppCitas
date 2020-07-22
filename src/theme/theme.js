@@ -1,41 +1,40 @@
-import {createMuiTheme} from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
     palette: {
-        primary : {
+        primary: {
             light: "#D50000",
-            main: "#768389",
+            main: "#E55F16",
             dark: "#e5b676",
-            contrastText: "#E3E3E3",
+            contrastText: "#E55F16",
         },
-        secundary : {
+        secundary: {
             light: "#D50000",
             main: "#E55F16",
             dark: "#e5b676",
             contrastText: "#E55F16",
         },
         background: {
-            default: "#050507 "
+            default: "#050507",
+            paper: "#768389"
         },
-        input : {
-            color : "#1976d2"
+        typography: {
+            fontFamily: [
+                '"OpenSans-Regular"',
+                '"OpenSans-Bold"',
+                '"OpenSans-Light"',
+            ].join(','),
         },
     },
     textField: {
         width: '90%',
         marginLeft: 'auto',
-        marginRight: 'auto',            
+        marginRight: 'auto',
         paddingBottom: 0,
         marginTop: 0,
         fontWeight: 500
     },
-    typography: {
-        fontFamily: [
-          '"OpenSans-Regular"',
-          '"OpenSans-Bold"',
-          '"OpenSans-Light"',
-        ].join(','),
-      },
+
 }
 );
 

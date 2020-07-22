@@ -6,6 +6,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Link, useLocation } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core';
 
 const items = [
   {
@@ -26,7 +27,24 @@ const items = [
   },
 ];
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.default,
+  },
+  ico: {
+    color: theme.palette.background.paper,
+  }
+}));
+
+
+
 const Navbar = () => {
+
+  const classes = useStyles();
   const location = useLocation();
 
   let value = String(location.pathname.match(/(^\/\w*)\/?/)[1]).toLowerCase();
@@ -36,14 +54,16 @@ const Navbar = () => {
   }
 
   return (
-    <BottomNavigation value={value}>
+    <BottomNavigation value={value} className={classes.root}>
       {items.map((item, index) => (
         <BottomNavigationAction
+          className={classes.iconOnly}
+          showLabel={false}
           key={index}
           component={Link}
           to={item.url}
           value={item.url}
-          icon={<item.icon />}
+          icon={<item.icon className={classes.ico} />}
         />
       ))}
     </BottomNavigation>
