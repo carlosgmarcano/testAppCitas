@@ -31,10 +31,10 @@ export default function Copyright() {
                     <Typography variant="caption" className={classes.title}>
                         Copyright MEMO. Todos los derechos reservados
                     </Typography>
-                    <IconButton edge="center" className={classes.menuButton} color="primary" aria-label="menu">
+                    <IconButton edge="start" className={classes.menuButton} color="primary" aria-label="menu">
                         <InstagramIcon />
                     </IconButton>
-                    <IconButton edge="center" className={classes.menuButton} color="primary" aria-label="menu">
+                    <IconButton edge="start" className={classes.menuButton} color="primary" aria-label="menu">
                         <FacebookIcon />
                     </IconButton>
                 </Toolbar>

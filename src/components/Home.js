@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import {
   GridList,
   GridListTile,
-  GridListTileBar,
   makeStyles,
   CircularProgress,
   CardActions,
@@ -67,7 +66,7 @@ export const Home = () => {
     <>
       {!globalState.sectores ? (
         <div className={classes.loader}>
-          <CircularProgress color="secondary.main" />
+          <CircularProgress />
         </div>
       ) : (
           <div className={classes.root}>
